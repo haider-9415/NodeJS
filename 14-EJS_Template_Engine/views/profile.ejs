@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>profile Page</title>
+    <style>
+        body{
+            background: rgb(174, 175, 207);
+        }
+    </style>
+</head>
+<body>
+    <%- include('common/header'); %>
+    <h1>Welcome <%= user.name %> </h1>
+    <h2>Email: <%= user.email %>  -  Contact: <%= user.contact %></h2>
+    <h3>Skills:</h3>
+    <ul>
+        <% user.skills.forEach((item) => { %>
+            <li> <%= item %> </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
